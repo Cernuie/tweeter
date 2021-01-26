@@ -26,9 +26,36 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
+  nav {
+      display: flex;
+      background: #4056A1;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      padding: 1.5em;
+      height: 120px;
+      width: 100%;
+    }
+
+  .nav-text-right {
+    margin: 1.5em;
+    background-color: #4056A1;
+    border: none;
+    color: white;
+    outline: none;
+  }
+
+ 
  span {
     display:flex;
     font-family: Bungee, sans-serif;
     text-decoration: #ffffff;
     color: #ffffff
  }
+
+ span.title {
+   margin: 1.5em;
+   font-family: 'Bungee', cursive;
+ }
+
+ 
