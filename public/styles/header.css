@@ -1,7 +1,8 @@
 header {
   height:400px;
   width: 100%;
-  background-color: orange;
+  background-color: #001b61;
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
   display:flex;
   flex-direction: column;
   justify-content: center;

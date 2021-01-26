@@ -26,9 +26,12 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- span {
-    display:flex;
-    font-family: Bungee, sans-serif;
-    text-decoration: #ffffff;
-    color: #ffffff
+ .container {
+  background-color: #545149 ;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 5%;
+  margin-right: 5%;
  }
