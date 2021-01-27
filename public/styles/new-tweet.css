@@ -43,3 +43,21 @@
   height: 35px;
   color: #ffffff;
 }
+
+.change-button-red {
+  color: red;
+}
+
+.tweet-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items:center;
+}
+
+.tweet-header {
+  display:flex;
+  flex-direction:row;
+  justify-content: space-between;
+}
