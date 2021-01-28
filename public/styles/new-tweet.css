@@ -48,16 +48,42 @@
   color: red;
 }
 
-.tweet-container {
+article {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items:center;
+  border: 2px solid black;
+  margin-bottom: 5px
 }
 
-.tweet-header {
+article.tweet header {
   display:flex;
   flex-direction:row;
   justify-content: space-between;
+  align-items:center ;
+  width: 100%;
+  margin: 5%;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+article.tweet p {
+  width: 100%;
+  display:flex; 
+  justify-content: start;
+  flex-wrap: wrap;
+  word-break: break-word;
+  margin-left: 3%;
+  margin-right: 3%;
+  border-bottom: 2px solid black
+}
+
+article.tweet footer {
+  width: 100%;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
