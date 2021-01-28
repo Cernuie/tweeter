@@ -4,6 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+
 const escape =  function(str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
@@ -70,11 +71,19 @@ const createTweetElement = function(tweetData) {
     
   return $tweet;
 }
+
+
 $(document).ready(function() {
   renderTweets(data);
-  $('form').submit((event) => {
+  $('#form').submit((event) => {
     event.preventDefault();
-    let $input = $(this).serialize
+    let $input = $(this).serialize();
     console.log($input)
+    let textInput = $(document.querySelector(".tweet-input")).children('#tweet-text')
+    $.ajax({
+      url:'/tweets',
+      method: 'POST',
+      data: $input
+    })
   })
 })

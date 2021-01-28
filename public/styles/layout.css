@@ -33,6 +33,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  margin-top: 2.5%;
   margin-left: 5%;
   margin-right: 5%;
  }
