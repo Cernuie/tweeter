@@ -19,7 +19,8 @@ body {
   background-color: #4056A1;
   font-size: 24px;
   font-family: "Source Sans Pro", sans-serif;
-  color: #ffffff
+  color: #ffffff;
+  width: 100%;
 }
 
 /*
@@ -35,3 +36,8 @@ body {
   margin-left: 5%;
   margin-right: 5%;
  }
+
+ .tweet-container {
+   width: 100%;
+ }
+

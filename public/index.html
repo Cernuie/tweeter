@@ -21,7 +21,6 @@
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-
     <style>
 
     </style>
@@ -36,15 +35,15 @@
         </button>
     </nav>
 
-    <header>
-      <div class= "b">
-          <img src="/images/profile-hex.png"> 
+    <header class="profile">
+      <div>
+          <img src="/images/profile-hex.png" height="200" width="200"> 
       </div>
       <br>
       <div>
-          <h2>Alexander Nguyen</h2>
+          <h2 style="margin-top: 0px;">Alexander Nguyen</h2>
       </div>
-  </header>
+    </header>
   
 
     <!-- Page-specific (main) content here -->
@@ -53,21 +52,18 @@
         <h2>Compose Tweet</h2>
         <form>
           <div class="tweet-input">
-            <label for="tweet-text">What are you humming about?</label>
-            <textarea name="text" id="tweet-text"></textarea>  
+            <label for="tweet-text" >What are you humming about?</label>
+            <textarea name="text" id="tweet-text" keyup="countChar(this)"></textarea>  
           </div>
           <div class="tweet-counter">
             <button type="submit" class= "tweet-sub">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
-      </section>      
-      <p>
-        paragraph 1
-      </p>
-      <p>
-        paragraph 2
-      </p>
+      </section>
+
+      <main class="tweet-container" id="tweet-container">
+      </main>
     </main>
   </body>
 </html>
