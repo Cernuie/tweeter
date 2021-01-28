@@ -4,6 +4,12 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
 const data = [
   {
     "user": {
@@ -63,4 +69,9 @@ const createTweetElement = function(tweetData) {
 }
 $(document).ready(function() {
   renderTweets(data);
+  $('form').submit((event) => {
+    event.preventDefault();
+    let $input = $(this).serialize
+    console.log($input)
+  })
 })
