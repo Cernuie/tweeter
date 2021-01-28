@@ -30,14 +30,16 @@ const data = [
 ]
 
 
-const renderTweets = (tweets) => {
-  for (const tweet of tweets) {
-    $('.tweet-container').prepend(createTweetElement(tweet));
+const renderTweets = function(tweets) {
+  for (let tweet of tweets) {
+    let tweetPrepend = createTweetElement(tweet);
+    $(".tweet-container").prepend(tweetPrepend);
   }
 }
 
-const createTweetElement = (tweetData) => {
-  let content = `<article class="tweet"> 
+const createTweetElement = function(tweetData) {
+  let $tweet = `
+  <article class="tweet"> 
    <header class="tweet-header">
     <div class= "tweeted-profile">
       <img class="icon" src=${tweetData.user.avatars} width = "50", height = "50">
@@ -49,14 +51,16 @@ const createTweetElement = (tweetData) => {
         ${tweetData.content.text}
       </p>
     <footer>
-      <small>${tweetData.created_at}
+      <small>${new Date(tweetData.created_at).toLocaleString()}
       <button class = "nav-text-right"> 
       buttons
     </button>
   </footer>
-  </article>`
+  </article>
+  `;
     
-  return content
+  return $tweet;
 }
-
-renderTweets(data);
+$(document).ready(function() {
+  renderTweets(data);
+})
