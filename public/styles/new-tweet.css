@@ -64,7 +64,6 @@ article.tweet header {
   justify-content: space-between;
   align-items:center ;
   width: 100%;
-  margin: 5%;
   padding-left: 3%;
   padding-right: 3%;
 }
@@ -76,14 +75,16 @@ article.tweet header {
 }
 
 article.tweet p {
-  width: 100%;
+  width: 97%;
   display:flex; 
   justify-content: start;
   flex-wrap: wrap;
   word-break: break-word;
-  margin-left: 3%;
-  margin-right: 3%;
-  border-bottom: 2px solid black
+  padding-left: 3%;
+  padding-bottom: 5%;
+  padding-right: 3%;
+  padding-top: 5%;
+  border-bottom: 3px solid black
 }
 
 article.tweet footer {
