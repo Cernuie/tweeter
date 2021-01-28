@@ -10,6 +10,7 @@ const escape =  function(str) {
   return div.innerHTML;
 }
 
+
 const data = [
   {
     "user": {
@@ -57,10 +58,12 @@ const createTweetElement = function(tweetData) {
         ${tweetData.content.text}
       </p>
     <footer>
-      <small>${new Date(tweetData.created_at).toLocaleString()}
-      <button class = "nav-text-right"> 
+      <time>
+      ${moment(tweetData.created_at).fromNow()}
+      </time>
+      <button> 
       buttons
-    </button>
+      </button>
   </footer>
   </article>
   `;

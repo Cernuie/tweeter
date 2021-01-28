@@ -87,19 +87,23 @@ article.tweet p {
   justify-content: start;
   flex-wrap: wrap;
   word-break: break-word;
-  padding-left: 3%;
-  padding-bottom: 5%;
-  padding-right: 3%;
-  padding-top: 5%;
+  margin-top: 0%;
+  padding: 3%;
   border-bottom: 3px solid black;
   margin-bottom: 0px;
 }
 
 article.tweet footer {
+  display:flex;
+  justify-content: space-between;
   width: 95%;
   height: 30px;
-  display:flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items:center;
 }
+
+article.tweet button {
+  background-color: #4056A1;
+  border: none;
+  color: white;
+  outline: none;
+  }
+  
