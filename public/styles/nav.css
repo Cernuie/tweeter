@@ -2,11 +2,14 @@ nav {
   display: flex;
   background: #4056A1;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: 1.5em;
   height: 120px;
   width: 100%;
+  overflow: hidden;
+  position: fixed;
+  top:0;
 }
 
 .nav-text-right {
@@ -15,14 +18,6 @@ background-color: #4056A1;
 border: none;
 color: white;
 outline: none;
-}
-
-
-span {
-display:flex;
-font-family: Bungee, sans-serif;
-text-decoration: #ffffff;
-color: #ffffff
 }
 
 span.title {
