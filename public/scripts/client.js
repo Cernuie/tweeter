@@ -25,12 +25,12 @@ const createTweetElement = function(tweetData) {
    <header class="tweet-header">
     <div class= "tweeted-profile">
       <img class="icon" src=${tweetData.user.avatars} width = "50", height = "50">
-      <span>${tweetData.user.name}</span>
+      <span>${escape(tweetData.user.name)}</span>
     </div>
-      <span>${tweetData.user.handle}</span>
+      <span>${escape(tweetData.user.handle)}</span>
       </header>
       <p>
-        ${tweetData.content.text}
+        ${escape(tweetData.content.text)}
       </p>
     <footer>
       <time>
@@ -53,6 +53,16 @@ $(document).ready(function() {
     event.stopImmediatePropagation();
     let $input = $(this).serialize();
     let textInput = $(document.querySelector(".tweet-input")).children('#tweet-text')
+
+    //check if submission is correct
+    //check for empty string, and string over char limit
+    if (textInput.val().length === 0) {
+      alert("You need to write a message to submit!");
+
+    } else if (textInput.val().length > 140) {
+      alert("Your message is too long! Trim it down.")
+    } else {
+
     $.ajax({
       url:'/tweets',
       method: 'POST',
@@ -70,5 +80,13 @@ $(document).ready(function() {
     })
     textInput.val('');
     $('.counter').val(140);
+    }
   })
+  $.ajax({
+    url: '/tweets',
+    method: 'GET',
+    })
+  .done((tweets) => {
+    renderTweets(tweets);
+    })
 })

@@ -8,6 +8,14 @@
 
 }
 
+.error {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 2px solid red;
+  margin: 3%
+}
+
 .tweet-input {
   display:flex;
   flex-direction: column;
