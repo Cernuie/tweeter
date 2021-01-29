@@ -53,13 +53,9 @@ body {
 @media only screen and (min-width: 1024px) {
   /* Have two main elements since header remains sticky: 
   the profile, and the container. 
-  We fix the profile, and resize the profile image
+  We fix the profile, and make it around a 40/60 split.
 
   */
-  .nav {
-    background-color: #f5e7ca;
-    color: #f5e7ca;
-  }
 
   body {
     display: flex;
