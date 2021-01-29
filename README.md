@@ -4,6 +4,12 @@ Tweeter is a simple, single-page Twitter clone.
 
 This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
 
+## Screenshots
+
+!["Screenshot of Profile Picture"](https://github.com/Cernuie/tweeter/blob/master/docs/vivaldi_2021-01-29_17-18-28.png?raw=true)
+!["Screenshot of Tweets in Desktop"](https://github.com/Cernuie/tweeter/blob/master/docs/vivaldi_2021-01-29_17-19-16.png?raw=true)
+!["Screenshot of Tweeter in Mobile"](https://github.com/Cernuie/tweeter/blob/master/docs/vivaldi_2021-01-29_17-30-03.png?raw=true)
+
 ## Getting Started
 
 1. Fork this repository, then clone your fork of this repository.
