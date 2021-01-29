@@ -5,13 +5,13 @@
   align-items: stretch;
   margin-bottom: 50px;
   width: 100%;
-
 }
 
 .error {
   display:flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   border: 2px solid red;
   margin: 3%
 }

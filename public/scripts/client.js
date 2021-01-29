@@ -48,6 +48,7 @@ const createTweetElement = function(tweetData) {
 
 
 $(document).ready(function() {
+  $('.error').hide();
   $('form').on('submit', function(event) {
     event.preventDefault();
     event.stopImmediatePropagation();
@@ -57,10 +58,25 @@ $(document).ready(function() {
     //check if submission is correct
     //check for empty string, and string over char limit
     if (textInput.val().length === 0) {
-      alert("You need to write a message to submit!");
-
+      let error = `
+      <i class="fas fa-exclamation-triangle"></i> 
+      <b> You need to write a message to submit! </b>
+      <i class="fas fa-exclamation-triangle"></i> 
+      `
+      $('.error').hide();
+      $('.error').empty();
+      $('.error').append(error);
+      $('.error').slideDown('slow');
     } else if (textInput.val().length > 140) {
-      alert("Your message is too long! Trim it down.")
+      let error = `
+      <i class="fas fa-exclamation-triangle"></i> 
+      <b> Your message is too long, please make it below 140 characters! </b>
+      <i class="fas fa-exclamation-triangle"></i> 
+      `
+      $('.error').hide();
+      $('.error').empty();
+      $('.error').append(error);
+      $('.error').slideDown('slow');
     } else {
 
     $.ajax({
