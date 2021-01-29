@@ -15,11 +15,11 @@ html {
  */
 
 body {
-  color: #4056A1;
-  background-color: #4056A1;
+  color: #f5e7ca;
+  background-color: #f5e7ca;
   font-size: 24px;
   font-family: "Source Sans Pro", sans-serif;
-  color: #ffffff;
+  color: white;
   width: 100%;
 }
 
@@ -28,7 +28,7 @@ body {
  */
 
  .container {
-  background-color: #4056A1 ;
+  background-color: inherit;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -36,6 +36,7 @@ body {
   margin-top: 2.5%;
   margin-left: 5%;
   margin-right: 5%;
+  color: black;
  }
 
  .tweet-container {

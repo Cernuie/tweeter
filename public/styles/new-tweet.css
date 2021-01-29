@@ -49,7 +49,9 @@
   border: none;
   outline:none;
   height: 35px;
-  color: #ffffff;
+  resize:none;
+  color:black;
+  margin-top: 1%;
 }
 
 .change-button-red {

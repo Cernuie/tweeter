@@ -1,6 +1,7 @@
 nav {
   display: flex;
-  background: #4056A1;
+  
+  background: #001b61;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -14,7 +15,7 @@ nav {
 
 .nav-text-right {
 margin: 1.5em;
-background-color: #4056A1;
+background-color: inherit;
 border: none;
 color: white;
 outline: none;
