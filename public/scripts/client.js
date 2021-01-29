@@ -19,6 +19,8 @@ const renderTweets = function(tweets) {
   }
 }
 
+
+
 const createTweetElement = function(tweetData) {
   let $tweet = `
   <article class="tweet"> 
@@ -36,8 +38,10 @@ const createTweetElement = function(tweetData) {
       <time>
       ${moment(tweetData.created_at).fromNow()}
       </time>
-      <button> 
-      buttons
+      <div class="tweet-icons"> 
+      <i class="far fa-flag"></i>
+      <i class="fas fa-retweet"></i>
+      <i class="far fa-heart"></i>
       </button>
   </footer>
   </article>

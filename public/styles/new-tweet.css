@@ -109,6 +109,9 @@ article.tweet footer {
   height: 30px;
 }
 
+article.tweet-icons {
+  opacity: 0;
+}
 article.tweet button {
   background-color: #4056A1;
   border: none;
