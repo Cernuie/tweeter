@@ -48,7 +48,15 @@ const createTweetElement = function(tweetData) {
 
 
 $(document).ready(function() {
+  //hide error message because no error yet
   $('.error').hide();
+  //functionality to scroll up and focus on text box
+  $('.nav-text-right').on("click", () => {
+    const textBox = $(document.querySelector(".tweet-input")).children('#tweet-text');
+    textBox[0].scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
+    textBox[0].focus({ preventScroll: true });
+  })
+  //functionality to submit tweet
   $('form').on('submit', function(event) {
     event.preventDefault();
     event.stopImmediatePropagation();
@@ -78,14 +86,14 @@ $(document).ready(function() {
       $('.error').append(error);
       $('.error').slideDown('slow');
     } else {
-
+      //if everything is good, submits tweet via ajax request
+      //gets it from /tweets, and then renders the tweets
     $.ajax({
       url:'/tweets',
       method: 'POST',
       data: $input
     })
     .done(() => {
-      console.log($input)
       $.ajax({
         url: '/tweets',
         method: 'GET'
@@ -94,10 +102,12 @@ $(document).ready(function() {
         renderTweets(tweets);
       })
     })
+    //resets counter and text box
     textInput.val('');
     $('.counter').val(140);
     }
   })
+  //load tweets on entering page
   $.ajax({
     url: '/tweets',
     method: 'GET',
